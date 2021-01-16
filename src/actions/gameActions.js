@@ -1,5 +1,5 @@
 import axios from "axios";
-import { popularGamesUrl,upcomingGamesUrl,newGamesUrl } from "../api";
+import { popularGamesUrl,upcomingGamesUrl,newGamesUrl } from "../Api";
 
 export const loadGames = () => async (dispatch) => {
 	const popularData = await axios.get(popularGamesUrl());
