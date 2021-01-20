@@ -8,11 +8,11 @@ import Game from "../components/Game";
 import GameDetail from "../components/GameDetail";
 //Styling
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
 const Home = () => {
 	const location = useLocation();
-	const pathID = location.pathname.split('/')[2];
+	const pathID = location.pathname.split("/")[2];
 
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -23,43 +23,45 @@ const Home = () => {
 
 	return (
 		<GameList>
-			{pathID && <GameDetail />}
-			<h2>Upcoming Games</h2>
-			<Games>
-				{upcoming.map((game) => (
-					<Game
-						name={game.name}
-						released={game.released}
-						id={game.id}
-						key={game.id}
-						img={game.background_image}
-					/>
-				))}
-			</Games>
-			<h2>Popular Games</h2>
-			<Games>
-				{popular.map((game) => (
-					<Game
-						name={game.name}
-						released={game.released}
-						id={game.id}
-						key={game.id}
-						img={game.background_image}
-					/>
-				))}
-			</Games>
-			<h2>New Games</h2>
-			<Games>
-				{newGames.map((game) => (
-					<Game
-						name={game.name}
-						released={game.released}
-						id={game.id}
-						key={game.id}
-						img={game.background_image}
-					/>
-				))}
-			</Games>
+			<AnimateSharedLayout type='crossfade'>
+				<AnimatePresence>{pathID && <GameDetail pathId={pathID} />}</AnimatePresence>
+				<h2>Upcoming Games</h2>
+				<Games>
+					{upcoming.map((game) => (
+						<Game
+							name={game.name}
+							released={game.released}
+							id={game.id}
+							key={game.id}
+							img={game.background_image}
+						/>
+					))}
+				</Games>
+				<h2>Popular Games</h2>
+				<Games>
+					{popular.map((game) => (
+						<Game
+							name={game.name}
+							released={game.released}
+							id={game.id}
+							key={game.id}
+							img={game.background_image}
+						/>
+					))}
+				</Games>
+				<h2>New Games</h2>
+				<Games>
+					{newGames.map((game) => (
+						<Game
+							name={game.name}
+							released={game.released}
+							id={game.id}
+							key={game.id}
+							img={game.background_image}
+						/>
+					))}
+				</Games>
+			</AnimateSharedLayout>
 		</GameList>
 	);
 };
