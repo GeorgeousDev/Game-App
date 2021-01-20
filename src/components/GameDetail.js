@@ -22,6 +22,7 @@ const GameDetail = ({ pathId }) => {
 			history.push("/");
 		}
 	};
+
 	const getPlatfrom = (platform) => {
 		switch (platform) {
 			case "PlayStation 4":
@@ -128,6 +129,11 @@ const Stats = styled(motion.div)`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	img {
+		height: 2rem;
+		width: 2rem;
+		display: inline;
+	}
 `;
 
 const Info = styled(motion.div)`
@@ -141,7 +147,8 @@ const Platforms = styled(motion.div)`
 	img {
 		margin-left: 3rem;
 		padding: 2rem;
-		height: 13vh;
+		min-height: 13vh;
+		width: 100%;
 	}
 	h4 {
 		margin-left: 6rem;
