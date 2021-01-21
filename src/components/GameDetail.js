@@ -134,6 +134,12 @@ const Stats = styled(motion.div)`
 		width: 2rem;
 		display: inline;
 	}
+	@media (max-width: 760px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	} ;
 `;
 
 const Info = styled(motion.div)`
@@ -153,6 +159,22 @@ const Platforms = styled(motion.div)`
 	h4 {
 		margin-left: 6rem;
 	}
+	@media (max-width: 760px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		img {
+			height: 1.5rem;
+			width: 1.5rem;
+			padding: 0rem;
+			margin: 0rem;
+		}
+		h4 {
+			font-size: 0.8rem;
+			padding: 0rem;
+			margin: 0rem;
+		}
+	} ;
 `;
 
 const Media = styled(motion.div)`
