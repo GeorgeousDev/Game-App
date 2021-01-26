@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useLocation} from "react-router-dom";
 //Redux
 import { useDispatch, useSelector } from "react-redux";
-import { loadGames } from "../actions/GameActions";
+import { loadGames } from "../actions/gameActions";
 //Components
 import Game from "../components/Game";
 import GameDetail from "../components/GameDetail";

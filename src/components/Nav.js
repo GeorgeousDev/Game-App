@@ -6,7 +6,7 @@ import { fadeIn } from '../animations';
 
 import logo from "../img/logo.svg";
 // Redux and Routes
-import { fetchSearch } from "../actions/GameActions";
+import { fetchSearch } from "../actions/gameActions";
 import { useDispatch } from "react-redux";
 
 const Nav = () => {
