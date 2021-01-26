@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 //Redux
 import { useDispatch, useSelector } from "react-redux";
 import { loadGames } from "../actions/GameActions";
@@ -14,6 +14,7 @@ import { fadeIn } from "../animations";
 const Home = () => {
 	const location = useLocation();
 	const pathID = location.pathname.split("/")[2];
+	
 
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -23,6 +24,7 @@ const Home = () => {
 	const { popular, upcoming, newGames, searched } = useSelector(
 		(state) => state.games,
 	);
+
 
 	return (
 		<GameList variants={fadeIn} initial="hidden" animate="show">
@@ -96,8 +98,8 @@ const GameList = styled(motion.div)`
 	}
 	@media (max-width: 760px) {
 		padding: 0rem;
-		h2{
-			text-align:center;
+		h2 {
+			text-align: center;
 		}
 	}
 `;

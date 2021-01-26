@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { smallImage } from "../util";
+import ReactStars from "react-rating-stars-component";
 //Images
 import playstation from "../img/playstation.svg";
 import steam from "../img/steam.svg";
@@ -48,6 +49,14 @@ const GameDetail = ({ pathId }) => {
 							<div className="rating">
 								<motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
 								<p>Rating: {game.rating}</p>
+								<ReactStars
+									count={5}
+									value={game.rating}
+									edit={false}
+									size={24}
+									isHalf={true}
+									activeColor="#ffd700"
+								/>
 							</div>
 							<Info>
 								<h3>Platforms</h3>
