@@ -2,7 +2,7 @@ import React, { useState } from "react";
 //Animations
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { fadeIn } from '../animations';
+import { fadeIn } from "../animations";
 
 import logo from "../img/logo.svg";
 // Redux and Routes
@@ -27,7 +27,7 @@ const Nav = () => {
 		dispatch({ type: "CLEAR_SEARCH" });
 	};
 	return (
-		<StyledNav variants={fadeIn} initial='hidden' animate='show'>
+		<StyledNav variants={fadeIn} initial="hidden" animate="show">
 			<Logo onClick={clearSearch}>
 				<img src={logo} alt="logo" />
 				<h1>Ignite</h1>
@@ -62,6 +62,15 @@ const StyledNav = styled(motion.div)`
 		color: white;
 		border-radius: 0.3rem;
 	}
+	@media (max-width: 760px) {
+		input {
+			width: 100%;
+		}
+		button {
+			font-size: 1.3rem;
+			width: 100%;
+		}
+	} ;
 `;
 
 const Logo = styled(motion.div)`
