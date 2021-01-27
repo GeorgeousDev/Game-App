@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/Game-App/static/js/main.c3e274fd.chunk.js",
-    "main.js.map": "/Game-App/static/js/main.c3e274fd.chunk.js.map",
+    "main.js": "/Game-App/static/js/main.93bb2376.chunk.js",
+    "main.js.map": "/Game-App/static/js/main.93bb2376.chunk.js.map",
     "runtime-main.js": "/Game-App/static/js/runtime-main.c858405f.js",
     "runtime-main.js.map": "/Game-App/static/js/runtime-main.c858405f.js.map",
     "static/js/2.40a2fb2f.chunk.js": "/Game-App/static/js/2.40a2fb2f.chunk.js",
@@ -21,6 +21,6 @@
   "entrypoints": [
     "static/js/runtime-main.c858405f.js",
     "static/js/2.40a2fb2f.chunk.js",
-    "static/js/main.c3e274fd.chunk.js"
+    "static/js/main.93bb2376.chunk.js"
   ]
 }
