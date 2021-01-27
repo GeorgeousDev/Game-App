@@ -11,7 +11,7 @@ const App = () => {
 		<div>
 			<GlobalStyles />
 			<Nav />
-			<Route path={["/game/:id", "/Game-App/"]}>
+			<Route path={["/game/:id", "/"]}>
 				<Home />
 			</Route>
 		</div>
